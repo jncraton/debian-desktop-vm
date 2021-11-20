@@ -3,10 +3,21 @@ name: Build
 on: [push, pull_request]
 
 jobs:
-  Build:
+  build:
+    name: Publish binaries
     runs-on: ubuntu-latest
+
     steps:
     - uses: actions/checkout@v2
     - run: sudo apt-get install libguestfs-tools
     - run: sudo chmod +r /boot/*
     - run: make
+    - uses: "marvinpinto/action-automatic-releases@latest"
+      with:
+        repo_token: "${{ secrets.GITHUB_TOKEN }}"
+        automatic_release_tag: "latest"
+        prerelease: true
+        title: "Development Build"
+        files: |
+          debian-11.qcow2
+          run
