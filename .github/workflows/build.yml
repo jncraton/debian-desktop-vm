@@ -8,4 +8,5 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - run: sudo apt-get install libguestfs-tools
+    - run: sudo chmod +r /boot/*
     - run: make
