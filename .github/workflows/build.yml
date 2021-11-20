@@ -19,5 +19,5 @@ jobs:
         prerelease: true
         title: "Development Build"
         files: |
-          debian-11.qcow2
+          debian.qcow2
           run
