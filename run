@@ -1,9 +1,7 @@
 #!/bin/bash
 
-sudo qemu-system-x86_64 \
+qemu-system-x86_64 \
   -device virtio-net,netdev=net0 -netdev user,id=net0 \
-  -snapshot \
-  --enable-kvm \
-  -m 512M \
+  -m 1024M \
   -monitor stdio \
   -hda debian-11.qcow2
