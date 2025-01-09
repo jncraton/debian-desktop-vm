@@ -21,4 +21,5 @@ jobs:
         title: "Development Build"
         files: |
           debian.qcow2
+          debian.vdi
           run
