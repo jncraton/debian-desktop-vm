@@ -11,4 +11,4 @@ debian.vdi: debian.qcow2
 	qemu-img convert -O vdi $< $@
 
 clean:
-	rm -f debian-12.qcow2 debian.qcow2
+	rm -f *.img *.qcow2
