@@ -5,4 +5,5 @@ sudo qemu-system-x86_64 \
   -device virtio-net,netdev=net0 -netdev user,id=net0 \
   -m 1024M \
   -monitor stdio \
-  -hda debian-12.qcow2
+  -snapshot \
+  -hda debian-12.img
