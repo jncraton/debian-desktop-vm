@@ -10,11 +10,8 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - run: sudo apt update
-    - run: sudo apt upgrade -y
-    - run: sudo apt install --fix-missing libguestfs-tools virtualbox
+    - run: sudo apt install --fix-missing libguestfs-tools
     - run: sudo chmod +r /boot/*
-    - run: sudo chmod 0666 /dev/kvm
-    - run: sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0
     - run: make
     - uses: "marvinpinto/action-automatic-releases@latest"
       with:
