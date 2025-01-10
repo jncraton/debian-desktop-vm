@@ -13,6 +13,7 @@ jobs:
     - run: sudo apt install --fix-missing libguestfs-tools virtualbox qemu-kvm libvirt-daemon-system
     - run: sudo chmod +r /boot/*
     - run: sudo chmod 0666 /dev/kvm
+    - run: sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0
     - run: make
     - uses: "marvinpinto/action-automatic-releases@latest"
       with:
