@@ -1,7 +1,7 @@
 all: debian-12-text.vdi debian-12-text.qcow2
 
 debian-12-text.img:
-	virt-builder -v -x debian-12 --output $@ --format raw --root-password password:password --hostname aucs --firstboot-command 'useradd -m -p "" user'
+	virt-builder -v -x debian-12 --output $@ --format raw --root-password password:password --no-network --hostname aucs --firstboot-command 'useradd -m -p "" user'
 
 debian-12.img:
 	virt-builder debian-12 --output $@ --format raw --root-password password:password --install 'xfce4,build-essential,git,micro,sqlite3' --edit '/etc/lightdm/lightdm.conf: s/#autologin-user=/autologin-user=user/' --hostname aucs --firstboot-command 'useradd -m -p "" user' --run-command 'rm -rf /usr/share/backgrounds/*'
