@@ -7,10 +7,10 @@ debian-12.img:
 	virt-builder debian-12 --output $@ --format raw --root-password password:password --install 'xfce4,build-essential,git,micro,sqlite3' --edit '/etc/lightdm/lightdm.conf: s/#autologin-user=/autologin-user=user/' --hostname aucs --firstboot-command 'useradd -m -p "" user' --run-command 'rm -rf /usr/share/backgrounds/*'
 
 %.qcow2: %.img
-	qemu-img convert -O qcow2 -c $< $@
+	virt-sparsify --format raw --convert qcow2 --compress $< $@
 
 %.vdi: %.img
-	qemu-img convert -O vdi $< $@
+	virt-sparsify --format raw --convert vdi $< $@
 	VBoxManage modifymedium --compact $@
 
 clean:
