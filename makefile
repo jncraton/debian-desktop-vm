@@ -11,4 +11,4 @@ debian-12.vdi: debian-12.img
 	VBoxManage modifymedium --compact $@
 
 clean:
-	rm -f *.img *.qcow2
+	rm -f *.img *.qcow2 *.vdi
