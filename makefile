@@ -11,7 +11,9 @@ debian-12.img:
 
 %.vdi: %.img
 	virt-sparsify --format raw --convert vdi $< $@
-	VBoxManage modifymedium --compact $@
+
+%.vdi.zip: %.vdi
+	zip $@ $<
 
 clean:
 	rm -f *.img *.qcow2 *.vdi
