@@ -8,6 +8,7 @@ debian-12.qcow2: debian-12.img
 
 debian-12.vdi: debian-12.img
 	qemu-img convert -O vdi $< $@
+	VBoxManage modifymedium --compact $@
 
 clean:
 	rm -f *.img *.qcow2
