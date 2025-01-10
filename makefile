@@ -1,4 +1,4 @@
-all: debian-12-text.vdi debian-12-text.qcow2 debian-12.qcow2 debian-12.vdi
+all: debian-12-text.vdi debian-12-text.qcow2
 
 debian-12-text.img:
 	virt-builder -v -x debian-12 --output $@ --format raw --root-password password:password --no-network --hostname aucs --firstboot-command 'useradd -m -p "" user'
