@@ -12,6 +12,7 @@ jobs:
     - run: sudo apt update
     - run: sudo apt install --fix-missing libguestfs-tools
     - run: sudo chmod +r /boot/*
+    - run: sudo chmod 0666 /dev/kvm
     - run: make
     - uses: "marvinpinto/action-automatic-releases@latest"
       with:
