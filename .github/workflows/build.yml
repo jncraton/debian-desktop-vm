@@ -10,7 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - run: sudo apt update
-    - run: sudo apt install --fix-missing libguestfs-tools virtualbox qemu-kvm libvirt-daemon-system
+    - run: sudo apt install --fix-missing libguestfs-tools virtualbox
     - run: sudo chmod +r /boot/*
     - run: sudo chmod 0666 /dev/kvm
     - run: sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0
