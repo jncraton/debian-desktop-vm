@@ -10,7 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - run: sudo apt update
-    - run: sudo apt install --fix-missing libguestfs-tools
+    - run: sudo apt install --fix-missing libguestfs-tools virtualbox
     - run: sudo chmod +r /boot/*
     - run: make
     - uses: "marvinpinto/action-automatic-releases@latest"
