@@ -5,7 +5,6 @@ debian-12.img:
 
 debian-12.qcow2: debian-12.img
 	qemu-img convert -O qcow2 -c $< $@
-	rm -f debian-12.qcow2
 
 debian-12.vdi: debian-12.img
 	qemu-img convert -O vdi $< $@
