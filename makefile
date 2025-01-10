@@ -1,4 +1,4 @@
-all: debian-12-text.vdi debian-12-text.qcow2
+all: debian-12-text.vdi.zip debian-12-text.qcow2 debian-12.vdi.zip debian-12.qcow2
 
 debian-12-text.img:
 	virt-builder -v -x debian-12 --output $@ --format raw --root-password password:password --hostname aucs --firstboot-command 'useradd -m -p "" user' --install "git,micro"
