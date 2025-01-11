@@ -1,5 +1,14 @@
 all: debian-12-text.vdi.zip debian-12-text.qcow2 debian-12.vdi.zip debian-12.qcow2
 
+dev=\
+  build-essential \
+  git \
+  micro \
+  sqlite3
+
+gui=\
+  xfce4
+
 debian-12-text.img:
 	virt-builder debian-12 \
 	  --output $@ \
@@ -8,7 +17,8 @@ debian-12-text.img:
 	  --hostname aucs \
 	  --firstboot-command 'useradd -m -p "" user' \
 	  --copy-in 'user:/home' \
-	  --run-command "apt update && apt install -y --no-install-suggests --no-install-recommends build-essential git micro sqlite3"
+	  --run-command "apt update" \
+	  --run-command "apt install -y --no-install-recommends ${dev}"
 
 debian-12.img:
 	virt-builder debian-12 \
@@ -18,7 +28,8 @@ debian-12.img:
 	  --copy-in 'user:/home' \
 	  --hostname aucs \
 	  --firstboot-command 'useradd -m -p "" user' \
-	  --run-command "apt update && apt install -y --no-install-suggests --no-install-recommends xfce4 xorg lightdm build-essential git micro sqlite3" \
+	  --run-command "apt update" \
+	  --run-command "apt install -y --no-install-recommends ${dev} ${gui}" \
 	  --run-command 'rm -rf /usr/share/backgrounds/*' \
 	  --edit '/etc/lightdm/lightdm.conf: s/#autologin-user=/autologin-user=user/'
 
