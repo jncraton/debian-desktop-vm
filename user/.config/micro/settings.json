@@ -1,0 +1,54 @@
+{
+    "*.go": {
+        "indentchar": "\t",
+        "tabstospaces": false
+    },
+    "*.in": {
+        "indentchar": "\t",
+        "tabstospaces": false
+    },
+    "*.py": {
+        "tabsize": 4,
+        "tabstospaces": true
+    },
+    "*.tsv": {
+        "indentchar": "\t",
+        "tabsize": 4,
+        "tabstospaces": false
+    },
+    "autoclose": false,
+    "autosu": true,
+    "backup": false,
+    "colorscheme": "simple",
+    "comment": true,
+    "cursorline": false,
+    "diff": true,
+    "eofnewline": false,
+    "fastdirty": true,
+    "ftoptions": true,
+    "gofmt": true,
+    "goimports": false,
+    "linter": false,
+    "literate": true,
+    "makefile": {
+        "indentchar": "\t",
+        "tabstospaces": false
+    },
+    "parsecursor": true,
+    "pluginchannels": [
+        "https://raw.githubusercontent.com/micro-editor/plugin-channel/master/channel.json"
+    ],
+    "pluginrepos": [],
+    "savecursor": true,
+    "savehistory": false,
+    "scrollmargin": 5,
+    "scrollspeed": 5,
+    "softwrap": true,
+    "status": true,
+    "statusformatl": " $(filename)",
+    "statusformatr": "$(line),$(col) ",
+    "tabsize": 2,
+    "tabstospaces": true,
+    "termtitle": false,
+    "xterm": true
+}
