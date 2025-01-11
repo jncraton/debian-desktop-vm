@@ -13,6 +13,7 @@ gui=\
   xorg \
   lightdm \
   mousepad \
+  thonny \
   firefox-esr
 
 debian-12-text.img:
