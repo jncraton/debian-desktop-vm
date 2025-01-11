@@ -1,6 +1,6 @@
 all: debian-12-text.vdi.zip debian-12-text.qcow2 debian-12.vdi.zip debian-12.qcow2
 
-dev=\
+text=\
   build-essential \
   git \
   micro \
@@ -23,7 +23,7 @@ debian-12-text.img:
 	  --firstboot-command 'useradd -m -p "" user' \
 	  --copy-in 'user:/home' \
 	  --run-command "apt update" \
-	  --run-command "apt install -y --no-install-recommends ${dev}"
+	  --run-command "apt install -y --no-install-recommends ${text}"
 
 debian-12.img:
 	virt-builder debian-12 \
@@ -35,7 +35,7 @@ debian-12.img:
 	  --run-command 'useradd -m -p "" user' \
 	  --run-command 'chsh -s /bin/bash user' \
 	  --run-command "apt update" \
-	  --run-command "apt install -y --no-install-recommends ${dev} ${gui}" \
+	  --run-command "apt install -y --no-install-recommends ${text} ${gui}" \
 	  --run-command 'rm -rf /usr/share/backgrounds/*' \
 	  --edit '/etc/lightdm/lightdm.conf: s/#autologin-user=/autologin-user=user/'
 
