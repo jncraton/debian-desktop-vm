@@ -31,7 +31,8 @@ debian-12.img:
 	  --root-password password:password \
 	  --copy-in 'user:/home' \
 	  --hostname aucs \
-	  --firstboot-command 'useradd -m -p "" user' \
+	  --run-command 'useradd -m -p "" user' \
+	  --run-command 'chsh -s /bin/bash user' \
 	  --run-command "apt update" \
 	  --run-command "apt install -y --no-install-recommends ${dev} ${gui}" \
 	  --run-command 'rm -rf /usr/share/backgrounds/*' \
