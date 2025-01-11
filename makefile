@@ -8,6 +8,7 @@ dev=\
 
 gui=\
   xfce4 \
+  lightdm \
   firefox-esr
 
 debian-12-text.img:
