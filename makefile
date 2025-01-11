@@ -4,6 +4,7 @@ dev=\
   build-essential \
   git \
   micro \
+  dhcpcd \
   sqlite3
 
 gui=\
