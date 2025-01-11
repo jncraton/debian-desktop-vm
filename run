@@ -6,4 +6,4 @@ sudo qemu-system-x86_64 \
   -m 1024M \
   -monitor stdio \
   -snapshot \
-  -hda debian-12.img
+  -hda debian-12-text.img

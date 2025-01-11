@@ -1,7 +1,7 @@
 all: debian-12-text.vdi.zip debian-12-text.qcow2 debian-12.vdi.zip debian-12.qcow2
 
 debian-12-text.img:
-	virt-builder -v -x debian-12 --output $@ --format raw --root-password password:password --hostname aucs --firstboot-command 'useradd -m -p "" user'  --copy-in 'user:/home' --run-command "apt update && apt install -y --no-install-suggests --no-install-recommends build-essential git micro sqlite3"
+	virt-builder debian-12 --output $@ --format raw --root-password password:password --hostname aucs --firstboot-command 'useradd -m -p "" user'  --copy-in 'user:/home' --run-command "apt update && apt install -y --no-install-suggests --no-install-recommends build-essential git micro sqlite3"
 
 debian-12.img:
 	virt-builder debian-12 --output $@ --format raw --root-password password:password --copy-in 'user:/home' --edit '/etc/lightdm/lightdm.conf: s/#autologin-user=/autologin-user=user/' --hostname aucs --firstboot-command 'useradd -m -p "" user' --run-command "apt update && apt install -y --no-install-suggests --no-install-recommends xfce4 build-essential git micro sqlite3" --run-command 'rm -rf /usr/share/backgrounds/*'
