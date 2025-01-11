@@ -11,6 +11,7 @@ gui=\
   xfce4 \
   xorg \
   lightdm \
+  mousepad \
   firefox-esr
 
 debian-12-text.img:
