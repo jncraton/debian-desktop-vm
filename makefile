@@ -8,6 +8,7 @@ dev=\
 
 gui=\
   xfce4 \
+  xorg \
   lightdm \
   firefox-esr
 
