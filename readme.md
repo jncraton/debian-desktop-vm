@@ -25,3 +25,8 @@ The following packages are pre-installed:
 - git
 - micro (TUI text editor)
 - xfce4 (graphical only)
+
+Accounts
+========
+
+The `user` account has no password and will login automatically in graphical mode. The `root` password is `password`. `sudo` has been installed and `user` has been added to the `sudoers` group.
