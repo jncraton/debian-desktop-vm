@@ -21,7 +21,8 @@ debian-12-text.img:
 	  --format raw \
 	  --root-password password:password \
 	  --hostname aucs \
-	  --firstboot-command 'useradd -m -p "" user' \
+	  --run-command 'useradd -m -p "" user' \
+	  --run-command 'chsh -s /bin/bash user' \
 	  --copy-in 'user:/home' \
 	  --run-command "apt update" \
 	  --run-command "apt install -y --no-install-recommends ${text}" \
