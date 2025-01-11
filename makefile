@@ -7,7 +7,8 @@ dev=\
   sqlite3
 
 gui=\
-  xfce4
+  xfce4 \
+  firefox-esr
 
 debian-12-text.img:
 	virt-builder debian-12 \
