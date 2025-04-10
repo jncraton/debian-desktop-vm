@@ -38,3 +38,6 @@ xterm*faceName:Nono Sans Mono CJK JP:size=9:antialias=true
 
 XTerm.vt100.translations: #override \n\
     Ctrl <Key>V: insert-selection(CLIPBOARD)
+
+uxterm.vt100.translations: #override \n\
+    Ctrl <Key>V: insert-selection(CLIPBOARD)
