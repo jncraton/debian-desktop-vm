@@ -27,6 +27,7 @@ debian-12-text.img:
 	  --copy-in 'user:/home' \
 	  --run-command "apt update" \
 	  --run-command "apt install -y --no-install-recommends ${text}" \
+          --run-command "apt clean" \
 	  --run-command 'chown -R user:user /home/user' \
 	  --run-command "usermod -aG sudo user"
 
@@ -41,6 +42,7 @@ debian-12.img:
 	  --run-command 'chsh -s /bin/bash user' \
 	  --run-command "apt update" \
 	  --run-command "apt install -y --no-install-recommends ${text} ${gui}" \
+          --run-command "apt clean" \
 	  --run-command "usermod -aG sudo user" \
 	  --run-command 'rm -rf /usr/share/backgrounds/*' \
 	  --run-command 'chown -R user:user /home/user' \
