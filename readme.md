@@ -9,11 +9,11 @@ Images
 The following images are provided:
 
 - Minimal text-mode
-  - [QEMU qcow2](https://github.com/jncraton/debian-desktop-vm/releases/download/latest/debian-12-text.qcow2)
-  - [VirtualBox VDI](https://github.com/jncraton/debian-desktop-vm/releases/download/latest/debian-12-text.vdi.zip)
+  - [QEMU qcow2](https://github.com/jncraton/debian-desktop-vm/releases/download/latest/debian-13-text.qcow2)
+  - [VirtualBox VDI](https://github.com/jncraton/debian-desktop-vm/releases/download/latest/debian-13-text.vdi.zip)
 - Graphical with `xfce4`
-  - [QEMU qcow2](https://github.com/jncraton/debian-desktop-vm/releases/download/latest/debian-12.qcow2)
-  - [VirtualBox VDI](https://github.com/jncraton/debian-desktop-vm/releases/download/latest/debian-12.vdi.zip)
+  - [QEMU qcow2](https://github.com/jncraton/debian-desktop-vm/releases/download/latest/debian-13.qcow2)
+  - [VirtualBox VDI](https://github.com/jncraton/debian-desktop-vm/releases/download/latest/debian-13.vdi.zip)
 
 Installed Packages
 ------------------
