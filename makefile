@@ -1,4 +1,4 @@
-all: debian-12-text.vdi.zip debian-12-text.qcow2 debian-12.vdi.zip debian-12.qcow2
+all: debian-13-text.vdi.zip debian-13-text.qcow2 debian-13.vdi.zip debian-13.qcow2
 
 text=\
   sudo \
@@ -16,7 +16,7 @@ gui=\
   thonny \
   firefox-esr
 
-debian-12-text.img:
+debian-13-text.img:
 	virt-builder debian-13 \
 	  --output $@ \
 	  --format raw \
@@ -31,7 +31,7 @@ debian-12-text.img:
 	  --run-command 'chown -R user:user /home/user' \
 	  --run-command "usermod -aG sudo user"
 
-debian-12.img:
+debian-13.img:
 	virt-builder debian-13 \
 	  --output $@ \
 	  --format raw \
