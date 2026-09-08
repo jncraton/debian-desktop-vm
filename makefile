@@ -17,7 +17,7 @@ gui=\
   firefox-esr
 
 debian-12-text.img:
-	virt-builder debian-12 \
+	virt-builder debian-13 \
 	  --output $@ \
 	  --format raw \
 	  --root-password password:password \
@@ -32,7 +32,7 @@ debian-12-text.img:
 	  --run-command "usermod -aG sudo user"
 
 debian-12.img:
-	virt-builder debian-12 \
+	virt-builder debian-13 \
 	  --output $@ \
 	  --format raw \
 	  --root-password password:password \
